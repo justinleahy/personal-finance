@@ -3,7 +3,7 @@ package com.justinleahy.personalfinance.transaction;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,7 +19,7 @@ public class Vendor {
     private LocalDateTime lastModifiedDateTime;
 
     @OneToMany(mappedBy = "vendor")
-    private Set<Transaction> transactions;
+    private Set<Transaction> transactions = new HashSet<>();
 
     protected Vendor() {}
 

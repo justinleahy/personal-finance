@@ -4,7 +4,6 @@ import com.justinleahy.personalfinance.user.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Entity
 public class Account {

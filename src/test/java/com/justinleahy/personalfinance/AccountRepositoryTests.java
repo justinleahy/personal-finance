@@ -4,7 +4,6 @@ import com.justinleahy.personalfinance.account.Account;
 import com.justinleahy.personalfinance.account.AccountRepository;
 import com.justinleahy.personalfinance.user.User;
 import com.justinleahy.personalfinance.user.UserRepository;
-import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

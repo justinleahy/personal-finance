@@ -1,6 +1,5 @@
 package com.justinleahy.personalfinance.user;
 
-import com.justinleahy.personalfinance.user.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.lang.NonNull;
 

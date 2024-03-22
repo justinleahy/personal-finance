@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,7 +42,7 @@ public class TransactionCategoryRepositoryTests {
 
         assertNotNull(foundTransactionCategories);
         assertEquals(1, foundTransactionCategories.size());
-        assertEquals(transactionCategory.getName(), foundTransactionCategories.get(0).getName());
+        assertEquals(transactionCategory.getName(), foundTransactionCategories.getFirst().getName());
 
         log.info("Transaction Categories were found: {}", foundTransactionCategories);
     }
