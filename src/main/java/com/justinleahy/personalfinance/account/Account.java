@@ -26,8 +26,8 @@ public class Account {
         this.nickname = nickname;
         this.accountType = accountType;
         this.user = user;
-        this.creationDateTime = LocalDateTime.now();
-        this.lastModifiedDateTime = creationDateTime;
+        creationDateTime = LocalDateTime.now();
+        lastModifiedDateTime = creationDateTime;
     }
 
     @Override
@@ -56,6 +56,6 @@ public class Account {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 }

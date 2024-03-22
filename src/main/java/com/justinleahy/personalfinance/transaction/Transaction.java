@@ -20,7 +20,7 @@ public class Transaction {
     private Vendor vendor;
 
     private LocalDateTime createdDateTime;
-    private LocalDateTime lastModifiedOnDateTime;
+    private LocalDateTime lastModifiedDateTime;
 
     protected Transaction() {}
 
@@ -28,7 +28,7 @@ public class Transaction {
         this.name = name;
         this.amount = amount;
         this.vendor = vendor;
-        this.createdDateTime = LocalDateTime.now();
-        this.lastModifiedOnDateTime = createdDateTime;
+        createdDateTime = LocalDateTime.now();
+        lastModifiedDateTime = createdDateTime;
     }
 }

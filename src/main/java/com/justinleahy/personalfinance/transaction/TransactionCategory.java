@@ -25,8 +25,8 @@ public class TransactionCategory {
 
     public TransactionCategory(String name) {
         this.name = name;
-        this.createdDateTime = LocalDateTime.now();
-        this.lastModifiedDateTime = this.createdDateTime;
+        createdDateTime = LocalDateTime.now();
+        lastModifiedDateTime = createdDateTime;
     }
 
     @Override
@@ -55,6 +55,6 @@ public class TransactionCategory {
 
     public void setName(String name) {
         this.name = name;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 }

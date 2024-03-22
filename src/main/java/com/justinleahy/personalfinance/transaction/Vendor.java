@@ -25,8 +25,8 @@ public class Vendor {
 
     public Vendor(String name) {
         this.name = name;
-        this.creationDateTime = LocalDateTime.now();
-        this.lastModifiedDateTime = this.creationDateTime;
+        creationDateTime = LocalDateTime.now();
+        lastModifiedDateTime = creationDateTime;
     }
 
     @Override
@@ -41,6 +41,9 @@ public class Vendor {
 
     public String getName() { return name; }
 
-    public void setName(String name) { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+        lastModifiedDateTime = LocalDateTime.now();
+    }
 
 }

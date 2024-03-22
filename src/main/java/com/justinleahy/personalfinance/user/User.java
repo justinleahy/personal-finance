@@ -3,6 +3,7 @@ package com.justinleahy.personalfinance.user;
 import com.justinleahy.personalfinance.account.Account;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -64,25 +65,33 @@ public class User {
         return passwordHash;
     }
 
+    public LocalDateTime getCreationDateTime() {
+        return creationDateTime;
+    }
+
+    public LocalDateTime getLastModifiedDateTime() {
+        return lastModifiedDateTime;
+    }
+
     public Set<Account> getAccounts() { return accounts; }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
-        this.lastModifiedDateTime = LocalDateTime.now();
+        lastModifiedDateTime = LocalDateTime.now();
     }
 }
