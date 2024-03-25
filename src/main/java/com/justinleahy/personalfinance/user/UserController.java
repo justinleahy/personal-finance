@@ -23,7 +23,7 @@ Create is done in every test
 public class UserController {
 
     private final UserRepository userRepository;
-    private static Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -52,6 +52,7 @@ public class UserController {
         if(optionalUser.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
+        log.info("Fetching user: {}", optionalUser.get());
         return new ResponseEntity<>(optionalUser.get(), HttpStatus.OK);
     }
 
@@ -63,12 +64,14 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
         User user = optionalUser.get();
+        log.info("Updating user: {}", user);
         user.setFirstName(updatedUser.getFirstName());
         user.setLastName(updatedUser.getLastName());
         user.setUserName(updatedUser.getUserName());
         user.setPasswordHash(updatedUser.getPasswordHash());
 
         userRepository.save(user);
+        log.info("Updated user: {}", user);
 
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
@@ -76,6 +79,7 @@ public class UserController {
     @RequestMapping(path = "/user/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<User> deleteUser(@PathVariable("id") Long id) {
         userRepository.deleteById(id);
+        log.info("Deleted user at id {}", id);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
