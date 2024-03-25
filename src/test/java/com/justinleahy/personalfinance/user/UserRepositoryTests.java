@@ -1,7 +1,5 @@
-package com.justinleahy.personalfinance;
+package com.justinleahy.personalfinance.user;
 
-import com.justinleahy.personalfinance.user.User;
-import com.justinleahy.personalfinance.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
