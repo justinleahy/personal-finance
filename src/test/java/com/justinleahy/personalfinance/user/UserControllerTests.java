@@ -19,7 +19,12 @@ public class UserControllerTests {
 
     @Test
     void testPostUser() throws Exception {
-        String userJson = "{\"firstName\": \"John\", \"lastName\" : \"Doe\", \"userName\" : \"johndoe100\", \"passwordHash\": \"hashedpassword\"}";
+        String userJson = "{" +
+                    "\"firstName\": \"John\"," +
+                    "\"lastName\" : \"Doe\"," +
+                    "\"userName\" : \"johndoe100\"," +
+                    "\"passwordHash\": \"hashedpassword\"" +
+                "}";
 
         mockMvc.perform(post("/user")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -30,7 +35,12 @@ public class UserControllerTests {
 
     @Test
     void testGetUser() throws Exception {
-        String userJson = "{\"firstName\": \"John\", \"lastName\" : \"Doe\", \"userName\" : \"johndoe101\", \"passwordHash\": \"hashedpassword\"}";
+        String userJson = "{" +
+                    "\"firstName\": \"John\"," +
+                    "\"lastName\" : \"Doe\"," +
+                    "\"userName\" : \"johndoe101\"," +
+                    "\"passwordHash\": \"hashedpassword\"" +
+                "}";
 
         mockMvc.perform(post("/user")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -44,7 +54,12 @@ public class UserControllerTests {
 
     @Test
     void testUpdateUser() throws Exception {
-        String userJson = "{\"firstName\": \"John\", \"lastName\" : \"Doe\", \"userName\" : \"johndoe102\", \"passwordHash\": \"hashedpassword\"}";
+        String userJson = "{" +
+                    "\"firstName\": \"John\"," +
+                    "\"lastName\" : \"Doe\"," +
+                    "\"userName\" : \"johndoe102\"," +
+                    "\"passwordHash\": \"hashedpassword\"" +
+                "}";
 
         mockMvc.perform(post("/user")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -52,7 +67,12 @@ public class UserControllerTests {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
 
-        userJson = "{\"firstName\": \"Updated\", \"lastName\" : \"User\", \"userName\" : \"johndoe102\", \"passwordHash\": \"hashedpassword\"}";
+        userJson = "{" +
+                    "\"firstName\": \"Updated\"," +
+                    "\"lastName\" : \"User\"," +
+                    "\"userName\" : \"johndoe102\"," +
+                    "\"passwordHash\": \"hashedpassword\"" +
+                "}";
 
         mockMvc.perform(patch("/user/{id}", 1)
                         .contentType(MediaType.APPLICATION_JSON)
