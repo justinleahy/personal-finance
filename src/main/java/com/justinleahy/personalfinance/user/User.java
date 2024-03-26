@@ -3,14 +3,12 @@ package com.justinleahy.personalfinance.user;
 import com.justinleahy.personalfinance.account.Account;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
