@@ -1,7 +1,5 @@
-package com.justinleahy.personalfinance;
+package com.justinleahy.personalfinance.account;
 
-import com.justinleahy.personalfinance.account.Account;
-import com.justinleahy.personalfinance.account.AccountRepository;
 import com.justinleahy.personalfinance.user.User;
 import com.justinleahy.personalfinance.user.UserRepository;
 import org.junit.jupiter.api.Test;
