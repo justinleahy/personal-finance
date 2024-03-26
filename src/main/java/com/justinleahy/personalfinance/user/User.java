@@ -45,6 +45,18 @@ public class User {
         );
     }
 
+    public String toJSON() {
+        return String.format(
+                        "{" +
+                                "\"firstName\":\"%s\"," +
+                                "\"lastName\":\"%s\"," +
+                                "\"userName\":\"%s\"," +
+                                "\"passwordHash\":\"%s\"" +
+                        "}",
+            firstName, lastName, userName, passwordHash
+        );
+    }
+
     public Long getId() {
         return id;
     }
