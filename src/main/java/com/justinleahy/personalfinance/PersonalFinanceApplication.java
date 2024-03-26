@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 @SpringBootApplication
 public class PersonalFinanceApplication {
 
-    private static Logger log = LoggerFactory.getLogger(PersonalFinanceApplication.class);
+    private static final Logger log = LoggerFactory.getLogger(PersonalFinanceApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(PersonalFinanceApplication.class, args);
