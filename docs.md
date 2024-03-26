@@ -16,6 +16,32 @@ Nothing in this is concrete, database schema will be changed actively and you wi
 
 Users currently do not have passwords (this will be added in the future, after security is implemented).
 
+### Endpoints
+
+`GET /api/user/{id}`
+
+Returns the user object of the specified id value
+
+Status Codes: `OK: 200`, `Not Found: 404`
+
+`POST /api/user`
+
+Creates a new user and returns the user object
+
+Status Codes: `Created: 201`, `Conflict: 409`
+
+`PATCH /api/user/{id}`
+
+Updates all values of the user at the specified id value
+
+Status Codes: `OK: 200`, `Not Found: 404`
+
+`DELETE /api/user/{id}`
+
+Deletes the user at the specified user id
+
+Status Codes: `No Content: 204`
+
 ## Accounts
 
 Accounts will function as they do in the real world.
@@ -33,7 +59,8 @@ Largest possible value for a transaction is 999999999999999.9999. BigInteger wit
 - 1 : Expense
 - 2 : Deposit
 
-These are the default ones, custom ones can be added in the future.
+These are the default ones, custom ones can be added in the future. Transaction Type names are unique, two ids cannot
+share the same name.
 
 #### Transaction Categories
 
